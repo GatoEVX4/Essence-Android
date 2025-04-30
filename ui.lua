@@ -42,6 +42,29 @@ do
         setreadonly(dtc, true);
 end
 
+-- // temp fix while im not home
+do
+     local org;
+     org = hookfunction(request, function(req)
+         if type(req) ~= "table" then
+             return org(req); -- will error for us
+         end
+ 
+         if type(req["Headers"]) == "table" and req["Headers"]["User-Agent"] ~= nil then
+             return org(req); -- ua set by script, like eclipse
+         end
+ 
+         local headers = req["Headers"];
+         if type(req["Headers"]) ~= "table" then
+             headers = { };
+         end
+ 
+         headers["User-Agent"] = "Essence";
+         req["Headers"] = headers;
+         return org(req);
+     end);
+end
+
 local Instances = {
     PhantomTest = Instance.new("ScreenGui"),
     mainframe = Instance.new("Frame"),
