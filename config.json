@@ -1,0 +1,6 @@
+{
+  "moduleName": "Essence",
+  "rbxhttp": false,
+  "script": "dtc.schedule(game:HttpGet(' '))",
+  "versionName": "Android"
+}
