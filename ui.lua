@@ -59,7 +59,7 @@ do
              headers = { };
          end
  
-         headers["User-Agent"] = "Essence Android 0.3";
+         headers["User-Agent"] = "Essence Android 0.3 BETA";
          req["Headers"] = headers;
          return org(req);
      end);
