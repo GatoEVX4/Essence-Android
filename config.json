@@ -1,6 +1,6 @@
 {
   "moduleName": "Essence",
   "rbxhttp": false,
-  "script": "dtc.schedule(game:HttpGet(' '))",
+  "script": "dtc.schedule(game:HttpGet('https://raw.githubusercontent.com/GatoEVX4/Essence-Android/refs/heads/main/ui.lua'))",
   "versionName": "Android"
 }
